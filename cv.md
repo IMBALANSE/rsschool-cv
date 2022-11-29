@@ -1,5 +1,3 @@
-##rsschool-cv
-
 ##Razil Valiev
 
 ---
@@ -8,6 +6,7 @@
 - **Phone** 8900 1234567
 - **e-mail**: yesmail@gmail.com
 - **GitHub**: IMBALANSE
+
 ---
 #### About Me
 My goal is to learn how to easily convert tasks into high-quality code. I started my career as an area sales manager in 2011 to 2016 
@@ -32,11 +31,13 @@ function sum(a, b) {
 let result = sum(1, 2);
 alert( result );
 ```
+
 ---
 ####Education
 - ISTU 2006-2010 Bachelor of Engineering and
 Technology of Radioelectronic (sp.210201)
 - RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)
+
 ---
 
 #### Languages
