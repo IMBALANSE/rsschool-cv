@@ -4,8 +4,8 @@
 #### Contacts
 
 - **Location**: Izhevsk, Russia
-- **Phone** 8900 1234567
-- **e-mail**: yesmail@gmail.com
+- **Phone** +79O9 O54333_2
+- **e-mail**: razil.valiev5@gmail.com
 - **GitHub**: IMBALANSE
 
 ---
