@@ -1,7 +1,8 @@
-##Razil Valiev
+## Razil Valiev
 
 ---
-####Contacts
+#### Contacts
+
 - **Location**: Izhevsk, Russia
 - **Phone** 8900 1234567
 - **e-mail**: yesmail@gmail.com
@@ -33,7 +34,7 @@ alert( result );
 ```
 
 ---
-####Education
+#### Education
 - ISTU 2006-2010 Bachelor of Engineering and
 Technology of Radioelectronic (sp.210201)
 - RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)
