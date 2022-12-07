@@ -1,35 +1,69 @@
-* {
-  box-sizing: border-box;
+* { /*в начале задаем для абсолюно всех тегов правило и только потом начинаем расписывать стили*/
+  box-sizing: border-box; /*Границы блока не меняются при добавлении отступов, в противном сл. размер блока растет при падинге  */
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
+html {
   font-family: 'Anybody';
   font-size: 18px;
-  font-weight: 400;
-  line-height: 1.25;
-  color: blue;
+  font-weight: 400; /*размер шрифта*/
+  line-height: 1.25; /*межстрочный интервал*/
 }
 
 .header {
-  color : rgb(214, 42, 26); 
+  display: block;
+}
+.container {
+  max-width: 1200px; /*максимальная ширина обертки, *без нее не сработает margin: 0px auto */
+  margin: 0px auto; /*центрует контейнер по горизонтали, важно запятая не ставится */
+  min-height: 50px;
+  background-color: aquamarine;
 }
 
+.container-header {
 
-html {
-  scroll-behavior: smooth; 
 }
-
-/*.rsschool {
-  width: 121px;
-  height: 45px;
-  background-image: url(./assets/svg/rs_school_js.svg);
-  background-size: contain;
-    background-repeat: no-repeat;
-}*/
+.nav {
+  background-color: red;
+}
+.nav_ul {
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none; /*убирает черные точки в списках */
+}
+.nav__item {
+  padding: 0px 12px 0px 12px; /*запятые не ставятся*/
+}
+.nav__link {
+  text-decoration: none; /*убирает подчеркивания в ссылках*/
+}
+.container-main {
+}
+.section {
+}
+.section-profile {
+}
+.section-profile__name {
+}
+.section-name__title {
+}
+.section-name__subtitle {
+}
+.section-title {
+}
+.section-list {
+}
+.section-list__item {
+}
+.Projects__link {
+}
+.pre {
+}
+.container-footer {
+}
+.footer {
+}
+.footer__nav-link {
+}
+.rsschool {
+}
