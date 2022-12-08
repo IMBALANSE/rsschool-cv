@@ -1,34 +1,60 @@
 * { /*в начале задаем для абсолюно всех тегов правило и только потом начинаем расписывать стили*/
   box-sizing: border-box; /*Границы блока не меняются при добавлении отступов, в противном сл. размер блока растет при падинге  */
+  margin: 0; /*эти два брата убирают все дефолтные отступы*/
+  padding: 0;
 }
 
 html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex; /*1 Связка для прижатия футера к низу, общая до 5*/
+  flex-direction: column; /*2*/
   font-family: 'Anybody';
   font-size: 18px;
   font-weight: 400; /*размер шрифта*/
   line-height: 1.25; /*межстрочный интервал*/
+  min-height: 100vh; /*3 минимальная высота, расшифровывается 100% от окна браузера. Без параметра высоты не работает связка (body 1,2) */
 }
+
+main {
+  flex: 1 1 auto; /*4 main body т.е. 1 позволили увеличиваться, вторая 1 позволили уменьшаться, auto -  автомоатический базовый размер*/
+}
+/*такая связка main body 1-4 позволяет растянуться футеру а средний блок прижать к верху*/
+
+/* body {
+  display: flex; /*1 Связка для прижатия футера к низу, общая до 5*
+  flex-direction: column; /*2*
+  justify-content: space-between; /*3*
+  font-family: 'Anybody';
+  font-size: 18px;
+  font-weight: 400; /*размер шрифта*
+  line-height: 1.25; /*межстрочный интервал*
+  min-height: 100vh; /*4 минимальная высота, без параметра высоты не работает связка (body 1,2,3) 
+}
+*в таком раскладе между heder main и footer остаются разрывы*/
 
 .header {
   display: block;
 }
 .container {
   max-width: 1200px; /*максимальная ширина обертки, *без нее не сработает margin: 0px auto */
-  margin: 0px auto; /*центрует контейнер по горизонтали, важно запятая не ставится */
-  min-height: 50px;
+  margin: 0 auto; /*центрует контейнер по горизонтали, важно запятая не ставится */
+  min-height: 70px; /*минимальная высота блока обертки*/
   background-color: aquamarine;
 }
 
 .container-header {
-
+  display:flex; /*в данном случает применил для запуска возможности прижать к правому краю и разместить по центру*/
+  justify-content: flex-end; /*функция прижать к правому краю, по умолчанию justify-content: flex-start - поэтому с левой стороны*/
+  align-items: center; /*разместить по центру (по вертикали по умолчанию align-items: stretch)*/
 }
 .nav {
   background-color: red;
 }
 .nav_ul {
-  display:flex;
-  justify-content: flex-end;
-  align-items: center;
+  display:flex; /*в данном случае чтобы список сложэился в ряд*/
   list-style: none; /*убирает черные точки в списках */
 }
 .nav__item {
@@ -38,12 +64,32 @@ html {
   text-decoration: none; /*убирает подчеркивания в ссылках*/
 }
 .container-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .section {
+  width: calc(50% - 50px); /*такая конструкция делит на попалам и вычитает по 50 пикселей от каждого блока*/
 }
 .section-profile {
+  display: flex;
+  background-color: #228B22;
+  justify-content: space-around; /*расстояние между блоками с разных сторон*/
+  width: 100%; /*чтобы эта секция была на всю ширину родительского блока*/
+  padding: 25px;
+  border-bottom: 9px solid red;
+}
+.image {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 60%);
+  filter: grayscale(0.2) brightness(1.05);
 }
 .section-profile__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .section-name__title {
 }
@@ -54,6 +100,7 @@ html {
 .section-list {
 }
 .section-list__item {
+  list-style: none;
 }
 .Projects__link {
 }
