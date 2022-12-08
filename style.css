@@ -14,7 +14,7 @@ body {
   font-family: 'Anybody';
   font-size: 18px;
   font-weight: 400; /*размер шрифта*/
-  line-height: 1.25; /*межстрочный интервал*/
+  line-height: 1.25; /*межстрочный интервал, По умолчанию в браузерах используется специальное значение line-height:normal . Оно означает, что браузер может принимать решение о размере строки самостоятельно. Как правило, оно будет в диапазоне 1.1 - 1.25 */
   min-height: 100vh; /*3 минимальная высота, расшифровывается 100% от окна браузера. Без параметра высоты не работает связка (body 1,2) */
 }
 
@@ -36,13 +36,13 @@ main {
 *в таком раскладе между heder main и footer остаются разрывы*/
 
 .header {
-  display: block;
+  background-color: rgb(207, 160, 241); /*чтобы цвет занимал всю ширину а не ширину обертки container*/
 }
 .container {
   max-width: 1200px; /*максимальная ширина обертки, *без нее не сработает margin: 0px auto */
   margin: 0 auto; /*центрует контейнер по горизонтали, важно запятая не ставится */
   min-height: 70px; /*минимальная высота блока обертки*/
-  background-color: aquamarine;
+
 }
 
 .container-header {
@@ -51,7 +51,7 @@ main {
   align-items: center; /*разместить по центру (по вертикали по умолчанию align-items: stretch)*/
 }
 .nav {
-  background-color: red;
+
 }
 .nav_ul {
   display:flex; /*в данном случае чтобы список сложэился в ряд*/
@@ -64,20 +64,26 @@ main {
   text-decoration: none; /*убирает подчеркивания в ссылках*/
 }
 .container-main {
+  height: 100%;
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .section {
   width: calc(50% - 50px); /*такая конструкция делит на попалам и вычитает по 50 пикселей от каждого блока*/
+  padding: 30px;
+  color: #0e6e07;
+  border-bottom: 1px solid #672f2f;
 }
 .section-profile {
   display: flex;
-  background-color: #228B22;
   justify-content: space-around; /*расстояние между блоками с разных сторон*/
   width: 100%; /*чтобы эта секция была на всю ширину родительского блока*/
   padding: 25px;
-  border-bottom: 9px solid red;
+  border-bottom: 9px solid rgb(219, 182, 230);
+  background-color: #ffffff;
+  color: #0e6e07;
 }
 .image {
   width: 200px;
@@ -96,21 +102,46 @@ main {
 .section-name__subtitle {
 }
 .section-title {
+  color: #7408a2;
 }
 .section-list {
 }
 .section-list__item {
-  list-style: none;
+
 }
 .Projects__link {
+  text-decoration: none;
 }
+
+.Projects__link:visited {
+  color: #0e6e07;
+}
+
 .pre {
 }
-.container-footer {
-}
+
 .footer {
+  background-color: rgb(203, 162, 221);
 }
+
+.container-footer {
+  display:flex;
+  align-self: auto;/*в начале не понял почему, но центрирует по вертикали дочерний блок, потому что по умолчанию стоит auto - Берёт родительское значение align-items или stretch, если нет родителя https://webref.ru/css/align-self*/
+}
+
+.footer__logo {
+  width: 100%; /*это свойство позволяет растянуться на всю ширину родителя*/
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*связка container-footer и footer__logo центрирует содержимое в футоре по вертикльной оси*/
+
 .footer__nav-link {
 }
 .rsschool {
+}
+
+.section:last-child { /*применить ко всем элементам с классом .section кроме последнего */
+  border-bottom: none;
 }
